@@ -38,10 +38,10 @@ def FindOtherNode(node,bar):
 
 # Find a vector from input node (of the input bar) in the direction of the bar
 def BarNodeToVector(origin_node,bar):
-    other_node = FindOtherNode(origin_node,bar)
+    other_node = FindOtherNode(origin_node, bar)
     origin_loc = origin_node.location
     other_loc = other_node.location 
-    vec = [other_loc[0]]-origin_loc[0], other_loc[1]-origin_loc[1]
+    vec = [other_loc[0]-origin_loc[0], other_loc[1]-origin_loc[1]]
     return vec
 
 # Convert to bars that meet at a node into vectors pointing away from that node
