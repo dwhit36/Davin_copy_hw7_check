@@ -89,12 +89,12 @@ def SineVectors(local_x_vec,other_vec):
 
 # Cosine of angle from local x bar to the other bar
 def CosineBars(local_x_bar,other_bar):
-    BarsToVectors(local_x_bar, other_bar)
-    Cos_Bars = DotProduct(local_x_bar,other_bar)/(VectorTwoNorm(local_x_bar)*VectorTwoNorm(other_bar))
+    [bar_1,bar_2] = BarsToVectors(local_x_bar, other_bar)
+    Cos_Bars = DotProduct(bar_1,bar_2)/(VectorTwoNorm(bar_1)*VectorTwoNorm(bar_2))
     return Cos_Bars
 
 # Sine of angle from local x bar to the other bar
 def SineBars(local_x_bar,other_bar):
-    BarsToVectors(local_x_bar, other_bar)
-    Sine_Bars = TwoDCrossProduct(local_x_bar, other_bar)/(VectorTwoNorm(local_x_bar)*VectorTwoNorm(other_bar))
+    [bar_1,bar_2] = BarsToVectors(local_x_bar, other_bar)
+    Sine_Bars = TwoDCrossProduct(bar_1, bar_2)/(VectorTwoNorm(bar_1)*VectorTwoNorm(bar_2))
     return Sine_Bars
