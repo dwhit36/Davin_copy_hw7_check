@@ -41,7 +41,7 @@ def FindOtherNode(node,bar):
     if(bar.init_node == node):
         return bar.end_node
     elif(bar.end_node == node):
-        bar.init_node
+        return bar.init_node
     else:
         sys.exit("The input npde is not on the bar")
 
